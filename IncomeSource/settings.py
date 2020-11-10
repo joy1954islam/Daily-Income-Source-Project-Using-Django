@@ -123,10 +123,13 @@ CRISPY_TEMPLATES_PACK = 'bootstrap4'
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = [BASE_DIR / 'media']
+import os
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # This is now a string
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # So is this
 
 MAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

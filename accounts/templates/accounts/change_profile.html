@@ -9,6 +9,7 @@
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
                 {{ u_form|materializecss }}
+                {{ p_form|materializecss }}
                 <br>
                 <div class="form-group">
                     <button class="btn btn-outline-info" type="submit">Update</button>
