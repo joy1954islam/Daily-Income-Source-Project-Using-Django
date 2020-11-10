@@ -3,5 +3,5 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def Home(request):
+def IncomeHome(request):
     return render(request,'SuperAdminNavbar.html')

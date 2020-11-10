@@ -6,30 +6,39 @@
                   <li>
                     <a href=""><i class="fa fa-home"></i> Home </a>
                   </li>
-                  <li>
-                    <a href=""><i class="fa fa-edit"></i> Ministry </a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-clone"></i> Ministry Incharge </a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-cube"></i> Teacher </a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-server"></i> Student </a>
-                  </li>
-                  <li>
-                    <a> <i class="fa fa-desktop"></i>Profile</a>
-                    <ul class="nav child_menu">
-                      <li><a href="">Profile</a></li>
-                      <li><a href="">Change Email</a></li>
-                      <li><a href="">Change Password</a></li>
+                  {% if request.user.is_authenticated %}
+                      <li>
+                        <a href=""><i class="fa fa-edit"></i> Ministry </a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fa fa-clone"></i> Ministry Incharge </a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fa fa-cube"></i> Teacher </a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fa fa-server"></i> Student </a>
+                      </li>
+                      <li>
+                        <a> <i class="fa fa-desktop"></i>Profile</a>
+                        <ul class="nav child_menu">
+                          <li><a href="">Profile</a></li>
+                          <li><a href="">Change Email</a></li>
+                          <li><a href="">Change Password</a></li>
 
-                    </ul>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-sign-out"></i> Log Out </a>
-                  </li>
+                        </ul>
+                        </li>
+                        <li>
+                            <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out </a>
+                        </li>
+                  {% else %}
+                      <li>
+                          <a href="{% url 'login' %}"><i class="fa fa-sign-out"></i>Log in</a>
+                      </li>
+                      <li>
+                          <a href="{% url 'sign_up' %}"><i class="fa fa-sign-out"></i>Create an account</a>
+                      </li>
+            {% endif %}
                 </ul>
               </div>
             </div>
