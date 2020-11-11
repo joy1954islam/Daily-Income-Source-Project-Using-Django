@@ -27,3 +27,18 @@ class IncomeCreate(CreateView):
         form.instance.username = self.request.user
         return super().form_valid(form)
 
+
+class IncomeUpdate(UpdateView):
+    model = Income
+    form_class = IncomeForm
+    template_name = 'Income/IncomeUpdateForm.html'
+    success_url = '/Income/'
+
+
+class IncomeDelete(DeleteView):
+    model = Income
+    template_name = 'Income/IncomeDeleteForm.html'
+    success_url = '/Income/'
+
+
+
