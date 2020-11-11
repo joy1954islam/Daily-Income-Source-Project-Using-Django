@@ -1,0 +1,16 @@
+{% extends 'SuperAdminNavbar.html' %}
+{% load crispy_forms_tags %}
+{% load materializecss %}
+{% load static %}
+
+{% block content %}
+<br>
+<form method="POST">
+    {% csrf_token %}
+    {{ form|materializecss }}
+    <input type="submit" value="Submit" class="btn btn-primary btn-lg px-5 "><br>
+   <br>
+   <br>
+</form>
+
+{% endblock %}

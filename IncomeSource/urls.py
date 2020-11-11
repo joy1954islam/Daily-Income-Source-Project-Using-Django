@@ -22,7 +22,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Income/',include('Income.urls')),
+    path('',include('Income.urls')),
 
     path('', user_views.BaseHome, name='BaseHome'),
     path('home/', user_views.home, name='home'),

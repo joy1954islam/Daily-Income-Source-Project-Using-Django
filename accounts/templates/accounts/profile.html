@@ -7,20 +7,20 @@
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
-              <img src="{{ user.profile.image.url }}">
-              <span class="card-title">{{ user.username }}</span>
+                  <img src="{{ user.profile.image.url }}">
+                  <span class="card-title">{{ user.username }}</span>
             </div>
             <div class="card-content">
-              <p class="text-secondary">Email : {{ user.email }}</p>
-            <p class="text-secondary">First Name : {{ user.first_name }}</p>
-            <p class="text-secondary">Last Name : {{ user.last_name }}</p>
-            <p class="text-secondary">NAME : {{ user.first_name }} {{ user.last_name }} </p>
-            <p class="text-secondary">Phone  : {{ user.profile.phone }}</p>
-            <p class="text-secondary">Address  : {{ user.profile.Address }}</p>
-            <p class="text-secondary">Bio  : {{ user.profile.bio }}</p>
+                <p class="text-secondary">Email : {{ user.email }}</p>
+                <p class="text-secondary">First Name : {{ user.first_name }}</p>
+                <p class="text-secondary">Last Name : {{ user.last_name }}</p>
+                <p class="text-secondary">NAME : {{ user.first_name }} {{ user.last_name }} </p>
+                <p class="text-secondary">Phone  : {{ user.profile.phone }}</p>
+                <p class="text-secondary">Address  : {{ user.profile.Address }}</p>
+                <p class="text-secondary">Bio  : {{ user.profile.bio }}</p>
             </div>
             <div class="card-action">
-            <a  class="btn btn-outline-info" href="{% url 'change_profile' %}">Change Profile</a>
+                 <a  class="btn btn-outline-info" href="{% url 'change_profile' %}">Change Profile</a>
             </div>
           </div>
         </div>
